@@ -1,0 +1,26 @@
+function makeCopy(obj) {
+    var clone = {};
+    for( var i in obj ) {
+        if( obj[i] != null &&  typeof ( obj[i] ) == "object" )
+            clone[i] = makeCopy( obj[i] );
+        else
+            clone[i] = obj[i];
+    }
+    return clone;
+}
+
+
+And could you please check this one as well, it's a deep copy with not enumerable values,
+I will might never need this, but just curious
+
+function makeCopy(obj) {
+    var clone = Object.create(obj.__proto__);
+		    Object.getOwnPropertyNames( obj ).forEach( val => {
+		    	if( obj[val] != null && typeof ( obj[val] ) == "object"){
+		    			clone[val] = makeCopy( obj[val] )
+		    	} else{
+		           clone[val] = obj[val];
+	            }
+	        });
+   return clone;
+}
