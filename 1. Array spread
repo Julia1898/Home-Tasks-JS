@@ -1,10 +1,12 @@
 var arr = [1,2,3,[4,5,6,[7,8,9,[0]]]];
 
 function rec( arr ){ 
-	 if( arr instanceof Array ){
-        return arr.reduce(( prev,cur ) => {
-                 return prev.concat(rec(cur));
-                        },[]);
-     } else return arr;
+   if( arr instanceof Array ){
+       return arr.reduce(( prev,cur ) => {
+           return prev.concat(rec(cur));
+       },[]);
+   } 
+   else{
+      return arr;
+   }
  }
-console.log(rec(arr));
