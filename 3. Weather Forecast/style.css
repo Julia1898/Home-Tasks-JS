@@ -1,0 +1,83 @@
+* {
+  	margin:0;
+  	padding: 0;
+  	box-sizing: border-box;
+}
+body{
+    width: 100%;
+    background-image: url(images/71.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: #fff;
+}
+.minsk_weather{
+    max-width: 500px;
+    min-height: 300px;
+    margin: 30px auto;
+    border-radius: 20px;
+ }
+.wraper_firstLine{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+ }
+.tempMinsk{
+    display: inline-block;
+    padding: 10px;
+    color: #fff;
+    font-size: 58px;
+}
+.img{
+    width: 50%;
+    text-align: center;
+}
+.iconMinsk{
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+}
+.claudsMinsk{
+    text-align: center;
+    height: 20px;
+}
+.current_data{
+    font-size: 12px;
+}
+i{
+    font-size:11px;
+    margin: 5px 5px 5px 0px;
+}
+hr{
+    border: none; 
+    color: #f7e3e342; 
+    background-color: #f7e3e342; 
+    height: 2px;
+    width: 100%;
+}
+.title{
+    margin:10px 0px;
+}
+.titleMinsk{  
+    width: 60%;
+    min-height: 80px;
+    margin: 0 auto;
+    background: url(images/titleMinsk.png);
+    background-size: cover;
+    background-position: center;
+}
+.dateMinsk{
+    margin: 0 auto;
+    font-size: 14px;
+    text-align: center;
+}
+.all_dayForecast{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+}
+.block{
+    width: 12.5%;
+    margin: 5px 0;
+    text-align: center;
+ }
