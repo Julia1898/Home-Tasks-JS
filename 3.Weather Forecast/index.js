@@ -34,27 +34,27 @@
 
   function makeCopy(obj) {
       var clone = {};
-      for( var i in obj ){
-           if( obj[i] != null && typeof( obj[i] ) == "object" ){
-               clone[i] = makeCopy( obj[i] );
-           } else{
+      for (var i in obj) {
+           if (obj[i] != null && typeof(obj[i]) == "object") {
+               clone[i] = makeCopy(obj[i]);
+           } else {
                clone[i] = obj[i];
              }
       }
       return clone;
   };
 
-  function getCelsius(val){
-      var result = Math.floor( val - 273 );
+  function getCelsius(val) {
+      var result = Math.floor(val - 273);
       return result;
   }
 
 
-  function getAllDayForecast(data){
+  function getAllDayForecast(data) {
       var hourInterval = 24 / 3;
       var result = '';
 
-      for( var i = 0; i < hourInterval; i++ ){
+      for (var i = 0; i < hourInterval; i++) {
            var time = (data.list[i].dt_txt).slice(11,16);
            var icon = data.list[i].weather[0].icon;
            var temp = getCelsius(data.list[i].main.temp);
