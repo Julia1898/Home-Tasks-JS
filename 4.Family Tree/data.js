@@ -2,30 +2,30 @@ var data = {
     "name": "Me",
     "children": [
         {
-          "name": "mum",
+          "name": "Luiza",
           "children":[
               {
-                  "name": "grandmother",
+                  "name": "Lily",
                   "children":[
                       {
-                          "name": "great-grandmother",
+                          "name": "Sophia",
                           "children":[]
                       },
                       {
-                          "name": "great-grandfather",
+                          "name": "Joshua",
                           "children": []
                       }
                   ]
               },
               {
-                  "name": "grandfather",
+                  "name": "James",
                   "children":[
                     {
-                        "name": "great-grandmother",
+                        "name": "Ava",
                         "children":[]
                     },
                     {
-                        "name": "great-grandfather",
+                        "name": "William",
                         "children": []
                     }
                 ]
@@ -33,30 +33,30 @@ var data = {
           ]
         },
         {
-          "name": "dad",
+          "name": "Jacob",
           "children":[
             {
-                "name": "grandmother",
+                "name": "Emily",
                 "children":[
                     {
-                        "name": "great-grandmother",
+                        "name": "Chloe",
                         "children":[]
                     },
                     {
-                        "name": "great-grandfather",
+                        "name": "Leo",
                         "children": []
                     }
                 ]
             },
             {
-                "name": "grandfather",
+                "name": "Jack",
                 "children":[
                   {
-                      "name": "great-grandmother",
+                      "name": "Daisy",
                       "children":[]
                   },
                   {
-                      "name": "great-grandfather",
+                      "name": "Hehry",
                       "children": []
                   }
                 ]
