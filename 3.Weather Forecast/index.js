@@ -12,3 +12,13 @@ function getCelsius(val) {
   var result = Math.floor(val - 273);
   return result;
 }
+
+
+class getElement {
+  constructor(selector) {
+    this.elem = document.querySelector(selector);
+  }
+  inner(value) {
+	return this.elem.innerHTML = value;
+  }
+};

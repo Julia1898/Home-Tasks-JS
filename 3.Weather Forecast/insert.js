@@ -1,13 +1,3 @@
-class getElement {
-  constructor(selector) {
-    this.elem = document.querySelector(selector);
-  }
-  inner(value) {
-	return this.elem.innerHTML = value;
-  }
-};
-
-
 function showWeather(weatherMinsk) {          
   var tempMinsk = getCelsius(weatherMinsk.list[0].main.temp);
   var iconMinsk = weatherMinsk.list[0].weather[0].icon;
