@@ -63,7 +63,7 @@ function createUl(li) {
   return ul;      
 }
 
-//add Values
+ //add Values
 out.onclick = function addValue(event) {
   var target = event.target;
 
