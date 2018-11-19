@@ -1,4 +1,4 @@
-var insertInDOM = (function(){
+var insertInDOM = (function() {
 
     function showWeather(weatherMinsk) {          
       var tempMinsk = getWeatherMinsk.getCelsius(weatherMinsk.list[0].main.temp);
