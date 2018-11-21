@@ -1,10 +1,10 @@
 var insertInDOM = (function() {
 
     function showWeather(weatherMinsk) {          
-      var tempMinsk = getWeatherMinsk.getCelsius(weatherMinsk.list[0].main.temp);
+      var tempMinsk = getCelsius(weatherMinsk.list[0].main.temp);
       var iconMinsk = weatherMinsk.list[0].weather[0].icon;
-      var minTempMinsk = getWeatherMinsk.getCelsius(weatherMinsk.list[0].main.temp_min);
-      var maxTempMinsk = getWeatherMinsk.getCelsius(weatherMinsk.list[0].main.temp_max);
+      var minTempMinsk = getCelsius(weatherMinsk.list[0].main.temp_min);
+      var maxTempMinsk = getCelsius(weatherMinsk.list[0].main.temp_max);
       var temperature = tempMinsk + `<span>&deg;C</span>`;
       var icon = "<img src = https://openweathermap.org/img/w/" + iconMinsk + ".png>";
       var clauds = weatherMinsk.list[0].weather[0].description;
@@ -23,14 +23,14 @@ var insertInDOM = (function() {
     }  
 
 
-    function getAllDayForecast(data) {
+    function showAllDayForecast(data) {
       var hourInterval = 24 / 3;
       var result = '';
 
       for (var i = 0; i < hourInterval; i++) {
           var time = (data.list[i].dt_txt).slice(11,16);
           var icon = data.list[i].weather[0].icon;
-          var temp = getWeatherMinsk.getCelsius(data.list[i].main.temp);
+          var temp = getCelsius(data.list[i].main.temp);
           
           result += `
     	     <div class="block">
@@ -44,8 +44,13 @@ var insertInDOM = (function() {
     } 
 
 
+    function getCelsius(val) {
+      var result = Math.floor(val - 273);
+      return result;
+    }
+
     return {
        showWeather: showWeather,
-       getAllDayForecast: getAllDayForecast
+       showAllDayForecast: showAllDayForecast
     }
 })();
