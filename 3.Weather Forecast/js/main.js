@@ -1,4 +1,3 @@
 var showWeather = insertInDOM.showWeather;
-var getAllDayForecast = insertInDOM.showAllDayForecast;
 
-getWeatherMinsk.getData(showWeather, getAllDayForecast);
+getWeatherMinsk.getData(showWeather);

@@ -7,7 +7,6 @@ var getWeatherMinsk = (function() {
       .then(blob => blob.json())
       .then(data => { 
           showWeather(data);
-          allDayForecast(data);
       })
   }
 
