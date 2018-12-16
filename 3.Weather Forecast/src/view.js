@@ -1,4 +1,5 @@
 var insertInDOM = (function() {
+    var titleMinsk = document.querySelector('.titleMinsk');
 
     function showWeather(weatherMinsk) {          
       var tempMinsk = getCelsius(weatherMinsk.list[0].main.temp);
@@ -69,7 +70,43 @@ var insertInDOM = (function() {
       return result;
     }
 
+
+    //////Input ///////////
+     
+
+    function showNewWeather(event, dropdown, input) {
+      var target  = event.target;
+      var newEndpoint = `https://api.openweathermap.org/data/2.5/forecast?q=${target.innerHTML}&APPID=9117bf1c0fa1bf432322023751327cc8`;             
+      input.value = target.innerHTML;
+      titleMinsk.innerHTML = target.innerHTML;
+      removeDropdownMenu(dropdown);
+
+      return newEndpoint;
+    }
+
+
+
+    function removeDropdownMenu(dropdown) {
+      dropdown.innerHTML = '';
+      dropdown.style.paddingTop = 0 + 'px';
+      dropdown.style.height = 0 + 'px';
+    }
+
+
+
+    function addDropdownMenu(value, dropdown) {
+      dropdown.innerHTML = value;
+      dropdown.style.height = 200 + 'px';
+      dropdown.style.paddingTop = 10 + 'px';
+    }
+
+     
     return {
-       showWeather: showWeather
+       showWeather: showWeather,
+       addDropdownMenu: addDropdownMenu,
+       removeDropdownMenu: removeDropdownMenu,
+       showNewWeather: showNewWeather
     }
 })();
+
+export {insertInDOM};
