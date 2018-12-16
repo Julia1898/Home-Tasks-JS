@@ -65,5 +65,3 @@ var data = {
         }
     ]
 };
-
-export {data};
