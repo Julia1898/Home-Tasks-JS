@@ -6,7 +6,8 @@
     <meta name= "viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
     <link href="style.css" rel="stylesheet" type="text/css"/>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
-  </head>
+    <link href="https://fonts.googleapis.com/css?family=Charm:700" rel="stylesheet">
+</head>
   <body>
       <div class="minsk_weather">
           <div class="wraper_firstLine">
@@ -26,13 +27,15 @@
           </div>
           <hr>
           <div class="title">
-              <div class="titleMinsk"></div>
+              <div class="titleMinsk">Minsk</div>
           </div>
           <hr>
           <div class="all_dayForecast"></div>
       </div>
-      <script type="text/javascript" src="js/data.js"></script>
-      <script type="text/javascript" src="js/view.js"></script>
-      <script type="text/javascript" src="js/main.js"></script>
+      <div class="chooseCity">
+          <input type="text" class="input" placeholder="inter city name">
+          <div class="dropdown"></div>
+      </div>
+      <script type="text/javascript" src="dist/main.js"></script>
   </body>
 </html>
